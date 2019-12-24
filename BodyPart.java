@@ -23,8 +23,8 @@ public class BodyPart
     public BodyPart(int xCord, int yCord, int tileSize)
     {
         // initialise instance variables
-       xCord = xCord;
-       yCord = yCord;
+       this.xCoord = xCord;
+       this.yCoord = yCord;
        width = tileSize;
        height = tileSize;
     }
