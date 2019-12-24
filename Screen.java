@@ -60,11 +60,16 @@ public class Screen extends JPanel implements Runnable
             ticks = 0;
             b = new BodyPart(xCoord, yCoord, 10);
             snake.add(b);
+            
+            if (snake.size() > size){
+             snake.remove(b);   
+            }
 
         }
     }
 
     public void paint(Graphics g){
+        g.clearRect(0, 0, WIDTH, HEIGHT);
         g.setColor(Color.black);
         for (int i = 0; i < WIDTH / 10; i++){
             g.drawLine(i * 10, 0, i * 10, HEIGHT);
